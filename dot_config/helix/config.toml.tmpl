@@ -18,7 +18,7 @@ cursor-line = "error"
 enable = true
 
 [editor.whitespace]
-# render = "all"
+render = "all"
 
 [editor.file-picker]
 hidden = false
@@ -30,6 +30,15 @@ display-inlay-hints = true
 "A-minus" = "switch_to_lowercase"
 "A-+" = "switch_to_uppercase"
 "A-s" = ":write-all"
+
+# Copy path of current buffer
+{{- if eq .chezmoi.os "darwin" }}
+"A-b" = ":sh echo '%{buffer_name}' | pbcopy"
+{{- else if eq .chezmoi.os "linux" }}
+"A-b" = ":sh echo '%{buffer_name}' | xclip -selection clipboard"
+{{- else }}
+"A-b" = ":sh powershell Set-Clipboard -Value '%{buffer_name}'"
+{{- end }}
 
 "A-e" = "half_page_up"
 "A-d" = "half_page_down"

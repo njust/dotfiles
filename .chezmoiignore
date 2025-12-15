@@ -1,8 +1,8 @@
-{{ if (and (ne .chezmoi.os "darwin") (ne .chezmoi.os "linux")) }}
+{{ if eq .chezmoi.os "windows" }}
 .config/helix/config.toml
 .config/helix/themes/ayu_custom.toml
-{{ end }}
-{{ if ne .chezmoi.os "windows" }}
+{{ else }}
 AppData/Roaming/helix/config.toml
 AppData/Roaming/helix/themes/ayu_custom.toml
+AppData/Roaming/yazi/config/theme.toml
 {{ end }}

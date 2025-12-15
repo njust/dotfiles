@@ -2,7 +2,5 @@
 .config/helix/config.toml
 .config/helix/themes/ayu_custom.toml
 {{ else }}
-AppData/Roaming/helix/config.toml
-AppData/Roaming/helix/themes/ayu_custom.toml
-AppData/Roaming/yazi/config/theme.toml
+AppData/**/*
 {{ end }}

@@ -1,6 +1,7 @@
 {{ if eq .chezmoi.os "windows" }}
 .config/helix/config.toml
 .config/helix/themes/ayu_custom.toml
+.config/yazi/theme.toml
 {{ else }}
 AppData/**/*
 {{ end }}

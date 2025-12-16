@@ -6,6 +6,7 @@ bufferline = "multiple"
 auto-format = true
 color-modes = true
 end-of-line-diagnostics = "hint"
+shell = ['nu', '-c']
 
 [editor.inline-diagnostics]
 # Minimum severity to show a diagnostic on the primary cursor's line.
@@ -62,8 +63,7 @@ display-inlay-hints = true
 "F" = "file_picker"
 "D" = "diagnostics_picker"
 "d" = "workspace_diagnostics_picker"
-# "s" = "workspace_symbol_picker"
-# "S" = "symbol_picker"
+"U" = ":insert-output random uuid"
 
 [editor.statusline]
 left = ["mode", "spinner"]
